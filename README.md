@@ -5,7 +5,7 @@ NIM   : 121140091
 
 Kelas : Pemrograman Web RB
 
-Website (hosting) : https://data-makanan-121140072.000webhostapp.com/
+Website (hosting) : https://pendaftaran-121140091.000webhostapp.com/
 
 Username : Khairani
 
