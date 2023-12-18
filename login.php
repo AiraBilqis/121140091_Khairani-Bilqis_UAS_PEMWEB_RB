@@ -75,10 +75,10 @@ if (isset($_POST["login"])) {
         <?php endif; ?>
 
         <form action="login.php" method="post" onsubmit="return validateForm()">
-            <input type="text" name="username" id="username" placeholder="Username" required>
+            <input type="text" name="username" id="username" placeholder="Username">
             <br>
 
-            <input type="password" name="password" id="password" placeholder="Password" required>
+            <input type="password" name="password" id="password" placeholder="Password">
             <br><br>
         
             <label for="remember" class="remember">
