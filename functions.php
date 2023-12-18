@@ -25,10 +25,9 @@ if (!function_exists('login')) {
 
         // Cek username
         if (mysqli_num_rows($result) === 1) {
-            // Cek password
+            // Cek password tanpa hash
             $row = mysqli_fetch_assoc($result);
-            // Perbaikan: tambahkan tanda kutip pada $password di dalam password_verify
-            if (password_verify($password, $row["password"])) {
+            if ($password === $row["password"]) { // Bandingkan password tanpa hash
                 // Set session
                 $_SESSION["login"] = true;
 
@@ -49,7 +48,6 @@ if (!function_exists('login')) {
         return false;
     }
 }
-
 
 if (!function_exists('query')) {
     function query($query) {
@@ -177,9 +175,6 @@ if (!function_exists('registrasi')) {
               </script>";
             return false;
         }
-
-        // enkripsi password
-        $password = password_hash($password, PASSWORD_DEFAULT);
 
         // tambahkan user baru ke database
         mysqli_query($conn, "INSERT INTO pengguna VALUES('$username', '$password')");
