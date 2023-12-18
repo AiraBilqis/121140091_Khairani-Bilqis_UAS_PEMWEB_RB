@@ -74,7 +74,7 @@ if (isset($_POST["login"])) {
             <p style="color: red; font-style: italic;">Username atau Password salah. Silakan coba lagi.</p>
         <?php endif; ?>
 
-        <form action="" method="post" onsubmit="return validateForm()">
+        <form action="login.php" method="post" onsubmit="return validateForm()">
             <input type="text" name="username" id="username" placeholder="Username" required>
             <br>
 
